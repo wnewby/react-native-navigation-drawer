@@ -187,7 +187,7 @@ var SlideMenu = React.createClass({
             {menu}
           </View>
           <View
-            style={[styles.center, frontWayStyle]}
+            style={[styles.center, frontWayStyle, this.props.centerStyle]}
             ref={(center) => this.center = center}
             {...this._panGesture.panHandlers}>
             {this.props.frontView}
@@ -211,7 +211,7 @@ var SlideMenu = React.createClass({
       return (
         <View style={[styles.containerSlideMenu, this.props.style]}>
           <View
-            style={[styles.center]}
+            style={[styles.center, this.props.centerStyle]}
             ref={(center) => this.center = center}
             {...this._panGesture.panHandlers}>
             {this.props.frontView}
